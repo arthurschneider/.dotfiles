@@ -1,0 +1,66 @@
+########################################################
+#                   GIT ALIASES                        #
+########################################################
+
+alias ga='git add'
+alias gaa='git add .'
+alias gap='git add -p'
+alias gb='git branch'
+alias gcom='git checkout master'
+
+alias gcod='git checkout development'
+alias gcob='git checkout -b'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gcam='git commit -am'
+
+alias gpo='git push origin'
+alias gpom='git push origin master'
+alias gpod='git push origin development'
+alias gd='git diff'
+alias gs='git status'
+
+alias glog='git log'
+
+########################################################
+#                        LINUX                         #
+########################################################
+
+alias la='ls -alh'
+alias al='ls -alh'
+alias vi='vim'
+alias ev='$EDITOR ~/.vimrc'
+alias sv='source ~/.vimrc'
+
+alias ez='$EDITOR ~/.zshrc'
+alias sz='source ~/.zshrc'
+alias k9='kill -9'
+alias code='cd ~/Code'
+alias mkd='mkdir'
+alias q='exit'
+
+########################################################
+#                   RAILS & RUBY                       #
+########################################################
+
+alias  rrs='rails server'
+alias  rrc='rails console'
+alias  rrg='rails generate'
+alias rrgc='rails generate controller'
+alias rrgm='rails generate model'
+
+alias rv='ruby --version'
+
+########################################################
+#                      VAGRANT                         #
+########################################################
+
+alias    vinit='vagrant init'
+alias      vup='vagrant up'
+alias     vssh='vagrant ssh'
+alias    vhalt='vagrant halt'
+alias vdestroy='vagrant destroy'
+
+alias  vstatus='vagrant status'
+alias       vp='vagrant provision'
+alias       vr='vagrant reload'
