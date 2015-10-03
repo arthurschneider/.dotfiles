@@ -1,7 +1,7 @@
 
 # Set ZSH Theme
 ZSH=/home/w1nd/.oh-my-zsh/
-ZSH_THEME="risto"
+ZSH_THEME="ruhtra"
 source $ZSH/oh-my-zsh.sh
 
 # Import aliases from .dotfiles
