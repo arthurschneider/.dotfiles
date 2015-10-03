@@ -7,12 +7,10 @@
 
 ########## Variables
 
-# dotfiles directory
 dir=~/.dotfiles
-# old dotfiles backup directory
 olddir=~/.dotfiles_old
-# list of files/folders to symlink in homedir
 files="vimrc zshrc"
+user="w1nd"
 
 ##########
 
@@ -34,3 +32,7 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file/.$file ~/.$file
 done
+
+# make link for custom zsh theme
+cd home/$user/.oh-my-zsh/custom/themes
+ln -s $dir/zshrc/ruhtra.zshrc-theme ruhtra.zshrc-theme
