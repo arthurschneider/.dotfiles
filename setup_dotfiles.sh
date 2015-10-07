@@ -33,6 +33,10 @@ for file in $files; do
     ln -s $dir/$file/.$file ~/.$file
 done
 
+# add link fot gitconfig
+cd ~
+ln -s $dir/git/.gitconfig ~/.gitconfig
+
 # make link for custom zsh theme
 cd home/$user/.oh-my-zsh/custom/themes
 ln -s $dir/zshrc/ruhtra.zshrc-theme ruhtra.zshrc-theme
