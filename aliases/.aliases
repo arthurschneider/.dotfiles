@@ -40,6 +40,7 @@ alias mkd='mkdir'
 alias q='exit'
 
 alias updateos='apt-get update; apt-get upgrade -f -y --force-yes; apt-get autoclean'
+alias open='gnome-open'
 
 ########################################################
 #                   RAILS & RUBY                       #
