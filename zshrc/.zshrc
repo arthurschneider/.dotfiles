@@ -7,7 +7,8 @@ source $ZSH/oh-my-zsh.sh
 # Import aliases from .dotfiles
 source /home/w1nd/.dotfiles/aliases/.aliases
 # Customize to your needs...
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin/:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/cuda/bin:/usr/local/cuda/bin:/opt/local/bin:/opt/local/sbin
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin/:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/cuda/bin:/usr/local/cuda/bin:/opt/local/bin:/opt/local/sbin
 
 #############################################################
 ###########################OPTIONS###########################
@@ -61,3 +62,5 @@ setopt AUTO_MENU
 #############################################################
 ############################RVM OPTIONS######################
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
