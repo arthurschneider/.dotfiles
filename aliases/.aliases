@@ -39,7 +39,7 @@ alias code='cd ~/Code'
 alias mkd='mkdir'
 alias q='exit'
 
-alias updateos='apt-get update; apt-get upgrade -f -y --force-yes; apt-get autoclean'
+alias updateos='sudo apt-get update && sudo apt-get upgrade -f -y --force-yes && sudo apt-get autoclean'
 alias open='gnome-open'
 
 ########################################################
