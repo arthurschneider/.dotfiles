@@ -1,4 +1,6 @@
-# .dotfiles
+<p align="center">
+  <img src="https://raw.githubusercontent.com/arthurschneider/.dotfiles/master/dotfiles_logo.png" alt=".dotfiles Logo"/>
+</p>
 ##### Collection of my dotfiles
 
 </br>
