@@ -1,6 +1,6 @@
 # -*- sh -*- vim:set ft=sh ai et sw=4 sts=4:
 
-function pwd(){
+function pwds(){
   echo "%{$FG[202]%}%2~"
 }
 
@@ -25,7 +25,7 @@ function ends() {
 }
 
 
-PROMPT='$(user)$(spacer)$(asset) $(pwd) $(gits)$(ends) '
+PROMPT='$(user)$(spacer)$(asset) $(pwds) $(gits)$(ends) '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[196]%}‹"
 ZSH_THEME_GIT_PROMPT_SUFFIX="›%{$reset_color%}"
