@@ -1,5 +1,5 @@
 ########################################################
-#                   GIT ALIASES                        #
+#                          GIT                         #
 ########################################################
 
 alias ga='git add'
@@ -21,6 +21,7 @@ alias gd='git diff'
 alias gs='git status'
 
 alias glog='git log'
+alias gunstage='git reset HEAD -- .'
 
 ########################################################
 #                        LINUX                         #
@@ -68,3 +69,12 @@ alias vdestroy='vagrant destroy'
 alias  vstatus='vagrant status'
 alias       vp='vagrant provision'
 alias       vr='vagrant reload'
+
+########################################################
+#                        NPM                           #
+########################################################
+
+alias ninst='npm install'
+alias nup='npm start'
+alias nv='npm -v'
+
