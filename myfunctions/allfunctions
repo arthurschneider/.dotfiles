@@ -4,3 +4,106 @@ mkdcd() {
   mkdir -p "$1" 
   cd "$1"
 }
+
+
+# Extra many types of compressed packages
+# Credit: http://nparikh.org/notes/zshrc.txt
+extract() {
+  if [ -f "$1" ]; then
+    case "$1" in
+      *.tar.bz2)  tar -jxvf "$1"                        ;;
+      *.tar.gz)   tar -zxvf "$1"                        ;;
+      *.bz2)      bunzip2 "$1"                          ;;
+      *.dmg)      hdiutil mount "$1"                    ;;
+      *.gz)       gunzip "$1"                           ;;
+      *.tar)      tar -xvf "$1"                         ;;
+      *.tbz2)     tar -jxvf "$1"                        ;;
+      *.tgz)      tar -zxvf "$1"                        ;;
+      *.zip)      unzip "$1"                            ;;
+      *.ZIP)      unzip "$1"                            ;;
+      *.pax)      cat "$1" | pax -r                     ;;
+      *.pax.Z)    uncompress "$1" --stdout | pax -r     ;;
+      *.Z)        uncompress "$1"                       ;;
+      *) echo "'$1' cannot be extracted/mounted via extract()" ;;
+    esac
+  else
+     echo "'$1' is not a valid file to extract"
+  fi
+}
+
+
+# Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression
+function targz() {
+	local tmpFile="${@%/}.tar";
+	tar -cvf "${tmpFile}" --exclude=".DS_Store" "${@}" || return 1;
+
+	size=$(
+		stat -f"%z" "${tmpFile}" 2> /dev/null; # OS X `stat`
+		stat -c"%s" "${tmpFile}" 2> /dev/null # GNU `stat`
+	);
+
+	local cmd="";
+	if (( size < 52428800 )) && hash zopfli 2> /dev/null; then
+		# the .tar file is smaller than 50 MB and Zopfli is available; use it
+		cmd="zopfli";
+	else
+		if hash pigz 2> /dev/null; then
+			cmd="pigz";
+		else
+			cmd="gzip";
+		fi;
+	fi;
+
+	echo "Compressing .tar using \`${cmd}\`…";
+	"${cmd}" -v "${tmpFile}" || return 1;
+	[ -f "${tmpFile}" ] && rm "${tmpFile}";
+	echo "${tmpFile}.gz created successfully.";
+}
+
+
+function bashtips() {
+cat <<EOF
+
+
+DIRECTORIES
+-----------
+~-  	Previous working directory
+
+HISTORY MANIPULATION
+--------------------
+!!  	Last command
+!?foo   	Last command containing \`foo'
+^foo^bar^   Last command containing \`foo\`, but substitute \`bar\`
+!!:0    	Last command word
+!!:^    	Last command's first argument
+!\$ 	Last command's last argument
+!!:*    	Last command's arguments
+!!:x-y  	Arguments x to y of last command
+C-s 	search forwards in history
+C-r 	search backwards in history
+
+LINE EDITING
+------------
+M-d 	kill to end of word
+C-w 	kill to beginning of word
+C-k 	kill to end of line
+C-u 	kill to beginning of line
+M-r 	revert all modifications to current line
+C-] 	search forwards in line
+M-C-]   search backwards in line
+C-t 	transpose characters
+M-t 	transpose words
+M-u 	uppercase word
+M-l 	lowercase word
+M-c 	capitalize word
+
+COMPLETION
+----------
+M-/ 	complete filename
+M-~ 	complete user name
+M-@ 	complete host name
+M-\$    	complete variable name
+M-! 	complete command name
+M-^ 	complete history
+EOF
+}
