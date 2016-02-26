@@ -1,0 +1,4 @@
+# Changes to a directory and lists its contents.
+cdls () {
+  builtin cd "$argv[-1]" && ls "${(@)argv[1,-2]}"
+}
