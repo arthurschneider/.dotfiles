@@ -38,5 +38,10 @@ cd ~
 ln -s $dir/git/.gitconfig ~/.gitconfig
 
 # make link for custom zsh theme
-cd home/$user/.oh-my-zsh/custom/themes
+cd $HOME/.oh-my-zsh/custom/themes
 ln -s $dir/zshrc/ruhtra.zshrc-theme ruhtra.zshrc-theme
+
+#enable all the .dotfiles
+source ~/.zshrc
+
+echo "Everything done try it out!"

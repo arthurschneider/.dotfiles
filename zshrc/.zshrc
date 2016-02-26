@@ -1,20 +1,21 @@
 
 # Set ZSH Theme
-ZSH=/home/w1nd/.oh-my-zsh/
+ZSH=$HOME.oh-my-zsh/
 ZSH_THEME="ruhtra"
 source $ZSH/oh-my-zsh.sh
 
 # Import aliases from .dotfiles
-source /home/w1nd/.dotfiles/aliases/.aliases
+source $HOME/.dotfiles/aliases/.aliases
+
+#Import functions from .dotfiles
+source $HOME/.dotfiles/myfunctions/allfunctions
+
 # Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 #export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin/:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/cuda/bin:/usr/local/cuda/bin:/opt/local/bin:/opt/local/sbin
 
 #############################################################
 ###########################OPTIONS###########################
-
-
-# ===== Basics
 
 # If you type foo, and it isn't a command, and it is a directory in your cdpath, go there
 setopt AUTO_CD
@@ -54,7 +55,6 @@ setopt ALWAYS_TO_END
 
 # Enable parameter expansion, command substitution, and arithmetic expansion in the prompt
 setopt PROMPT_SUBST
-
 
 unsetopt MENU_COMPLETE
 setopt AUTO_MENU
