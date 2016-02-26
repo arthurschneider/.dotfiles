@@ -1,6 +1,6 @@
 
 # Set ZSH Theme
-ZSH=$HOME.oh-my-zsh/
+ZSH=$HOME/.oh-my-zsh/
 ZSH_THEME="ruhtra"
 source $ZSH/oh-my-zsh.sh
 
