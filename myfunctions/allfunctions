@@ -1,9 +1,9 @@
-source ./function_mkdcd
+source $HOME/.dotfiles/myfunctions/function_mkdcd
 
-source ./function_extract
+source $HOME/.dotfiles/myfunctions/function_extract
 
-source ./function_targz
+source $HOME/.dotfiles/myfunctions/function_targz
 
-source ./function_shelltips
+source $HOME/.dotfiles/myfunctions/function_shelltips
 
-source ./function_cdls
+source $HOME/.dotfiles/myfunctions/function_cdls
