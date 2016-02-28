@@ -3,6 +3,10 @@ ZSH=$HOME/.oh-my-zsh/
 ZSH_THEME="ruhtra"
 source $ZSH/oh-my-zsh.sh
 
+# add z plugin
+. $HOME/.dotfiles/zshrc/z.sh
+
+
 # Import aliases from .dotfiles
 source $HOME/.dotfiles/aliases/.aliases
 
@@ -57,6 +61,12 @@ unsetopt MENU_COMPLETE
 # You only get the menu behaviour when you hit TAB again on the ambiguous
 # completion
 setopt AUTO_MENU
+
+
+#############################################################
+#############################PLUGINS#########################
+
+plugins=(git npm z extract)
 
 #############################################################
 ############################RVM OPTIONS######################
