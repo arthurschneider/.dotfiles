@@ -1,4 +1,3 @@
-
 # Set ZSH Theme
 ZSH=$HOME/.oh-my-zsh/
 ZSH_THEME="ruhtra"
@@ -12,21 +11,19 @@ source $HOME/.dotfiles/myfunctions/allfunctions
 
 # Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-#export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin/:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/cuda/bin:/usr/local/cuda/bin:/opt/local/bin:/opt/local/sbin
 
 #############################################################
 ###########################OPTIONS###########################
 
-# If you type foo, and it isn't a command, and it is a directory in your cdpath, go there
+# If you type foo, and it isn't a command, 
+# and it is a directory in your cdpath go there
 setopt AUTO_CD
 
 # Allow comments even in interactive shells (especially for Muness)
 setopt INTERACTIVE_COMMENTS
 
-# ===== History
-
 # Allow multiple terminal sessions to all append to one zsh command history
-setopt APPEND_HISTORY 
+setopt APPEND_HISTORY
 
 # Add comamnds as they are typed, don't wait until shell exit
 setopt INC_APPEND_HISTORY 
@@ -43,20 +40,22 @@ setopt HIST_REDUCE_BLANKS
 # Include more information about when the command was executed, etc
 setopt EXTENDED_HISTORY
 
-# ===== Completion 
-
 # Allow completion from within a word/phrase
-setopt COMPLETE_IN_WORD 
+setopt COMPLETE_IN_WORD
 
-# When completing from the middle of a word, move the cursor to the end of the word
-setopt ALWAYS_TO_END            
+# When completing from the middle of a word,
+# move the cursor to the end of the word
+setopt ALWAYS_TO_END
 
-# ===== Prompt
-
-# Enable parameter expansion, command substitution, and arithmetic expansion in the prompt
+# Enable parameter expansion, command substitution,
+# and arithmetic expansion in the prompt
 setopt PROMPT_SUBST
 
+# Do not want completion complettly and running throuh it wit TAB
 unsetopt MENU_COMPLETE
+
+# You only get the menu behaviour when you hit TAB again on the ambiguous
+# completion
 setopt AUTO_MENU
 
 #############################################################
