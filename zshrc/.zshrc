@@ -1,5 +1,5 @@
 # Set ZSH Theme
-ZSH=$HOME/.oh-my-zsh/
+ZSH=$HOME/.dotfiles/.oh-my-zsh/
 ZSH_THEME="ruhtra"
 source $ZSH/oh-my-zsh.sh
 
@@ -66,7 +66,7 @@ setopt AUTO_MENU
 #############################################################
 #############################PLUGINS#########################
 
-plugins=(github npm z extract)
+plugins=(github npm z extract zsh-syntax-highlighting)
 
 #############################################################
 ############################RVM OPTIONS######################

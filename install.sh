@@ -15,7 +15,7 @@ user=$USERNAME
 backup_oldfiles(){
  mkdir -p $olddir
  cd $dir
- 
+
  for file in $files; do
      echo "Moving any existing dotfiles from ~ to $olddir"
      mv ~/.$file ~/.dotfiles_old/
@@ -28,14 +28,10 @@ link_the_files(){
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file/.$file ~/.$file
   done
- 
+
   echo "Creating symlink for .gitconfig in home directory."
   cd ~
   ln -s $dir/git/.gitconfig ~/.gitconfig
- 
-  echo "Creating symlink for custom theme in .oh-my-zsh."
-  cd $HOME/.oh-my-zsh/custom/themes
-  ln -s $dir/zshrc/ruhtra.zshrc-theme ruhtra.zshrc-theme
 
 }
 
