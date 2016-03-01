@@ -1,17 +1,21 @@
+DOTFILES=$HOME/.dotfiles
+ZSH=$DOTFILES/.oh-my-zsh/
+
 # Set ZSH Theme
-ZSH=$HOME/.dotfiles/.oh-my-zsh/
 ZSH_THEME="ruhtra"
-source $ZSH/oh-my-zsh.sh
+. $ZSH/oh-my-zsh.sh
 
-# add z plugin
-. $HOME/.dotfiles/zshrc/z.sh
+# Add z plugin
+. $DOTFILES/zshrc/z.sh
 
+# Add syntax highlighting plugin
+. $DOTFILES/zshrc/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 # Import aliases from .dotfiles
-source $HOME/.dotfiles/aliases/.aliases
+. $DOTFILES/aliases/.aliases
 
-#Import functions from .dotfiles
-source $HOME/.dotfiles/myfunctions/allfunctions
+# Import functions from .dotfiles
+. $DOTFILES/myfunctions/allfunctions
 
 # Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -61,12 +65,6 @@ unsetopt MENU_COMPLETE
 # You only get the menu behaviour when you hit TAB again on the ambiguous
 # completion
 setopt AUTO_MENU
-
-
-#############################################################
-#############################PLUGINS#########################
-
-plugins=(github npm z extract zsh-syntax-highlighting)
 
 #############################################################
 ############################RVM OPTIONS######################
