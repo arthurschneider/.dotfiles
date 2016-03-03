@@ -43,7 +43,11 @@ link_the_files(){
 backup_oldfiles
 link_the_files
 
-#enable all the .dotfiles
+# download all the submodules
+cd $HOME/.dotfiles
+git submodule update
+
+# enable all the .dotfiles
 source ~/.zshrc
 
 echo "Everything done try it out!"
