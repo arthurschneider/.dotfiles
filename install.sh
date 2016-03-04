@@ -33,6 +33,11 @@ link_the_files(){
   cd ~
   ln -s $dir/git/.gitconfig ~/.gitconfig
 
+
+  echo "Creating symlink for my theme in oh-my-zsh directory"
+  cd ~/.dotfiles/.oh-my-zsh/custom/themes/
+  ln -s ~/.dotfiles/zshrc/ruhtra.zsh-theme ruhtra.zsh-theme
+
 }
 
 ################################
