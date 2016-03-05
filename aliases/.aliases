@@ -49,6 +49,7 @@ alias q='exit'
 alias updateos='sudo apt-get update && sudo apt-get upgrade -f -y --force-yes && sudo apt-get autoclean'
 alias open='gnome-open'
 alias ping='ping -c 5'
+alias cl='clear'
 
 #        __________    _____  .___.____       _________
 #        \______   \  /  _  \ |   |    |     /   _____/
