@@ -1,4 +1,4 @@
 # Changes to a directory and lists its contents.
 cdls () {
-  builtin cd "$argv[-1]" && ls "${(@)argv[1,-2]}"
+  cd "$argv[-1]" && la "${(@)argv[1,-2]}"
 }
