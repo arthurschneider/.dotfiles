@@ -38,6 +38,13 @@ link_the_files(){
   cd ~/.dotfiles/.oh-my-zsh/custom/themes/
   ln -s ~/.dotfiles/zshrc/ruhtra.zsh-theme ruhtra.zsh-theme
 
+  echo "Creating symlinks for atom dotfiles"
+  cd ~/.atom/
+  ln -s ~/.dotfiles/atom/config.cson config.cson
+  ln -s ~/.dotfiles/atom/init.coffee init.coffee
+  ln -s ~/.dotfiles/atom/keymap.cson keymap.cson
+  ln -s ~/.dotfiles/atom/snippets.cson snippets.cson
+  ln -s ~/.dotfiles/atom/styles.less styles.less
 }
 
 ################################
