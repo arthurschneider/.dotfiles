@@ -15,6 +15,8 @@ alias sv='source ~/.vimrc'
 alias k9='kill -9'
 alias mkd='mkdir'
 alias q='exit'
+alias opstart='sudo service openproject-ce start'
+alias opstop='sudo service openproject-ce stop'
 
 alias updateos='sudo apt-get update && sudo apt-get upgrade -f -y --force-yes && sudo apt-get autoclean'
 alias open='gnome-open'
@@ -22,6 +24,8 @@ alias ping='ping -c 5'
 alias cl='clear'
 alias please='sudo'
 alias aptinstall='apt-get install'
+
+alias opassetsprecomp='sudo openproject-ce run assets:precompile'
 
 #                     ________.______________
 #                    /  _____/|   \__    ___/
