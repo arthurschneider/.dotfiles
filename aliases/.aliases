@@ -52,7 +52,7 @@ alias open='gnome-open'
 alias ping='ping -c 5'
 alias cl='clear'
 alias please='sudo'
-alias aptinstall='apt-get install'
+alias aptinstall='sudo apt-get install'
 
 #        __________    _____  .___.____       _________
 #        \______   \  /  _  \ |   |    |     /   _____/
