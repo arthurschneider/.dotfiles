@@ -52,6 +52,8 @@ alias open='gnome-open'
 alias ping='ping -c 5'
 alias cl='clear'
 alias please='sudo'
+
+alias openmakeys='keepassx ~/Dropbox/passwordList.kdb'
 alias aptinstall='sudo apt-get install'
 
 #        __________    _____  .___.____       _________
