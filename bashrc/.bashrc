@@ -5,6 +5,13 @@
 #              |_______ \___\____|__  /______/ /___/\  \
 #                      \/           \/               \_/
 
+alias ...=../..
+alias ....=../../..
+alias .....=../../../..
+alias ......=../../../../..
+
+alias cd..='cd ..'
+
 alias la='ls -alh'
 alias al='ls -alh'
 alias vi='vim'
@@ -15,6 +22,8 @@ alias sv='source ~/.vimrc'
 alias k9='kill -9'
 alias mkd='mkdir'
 alias q='exit'
+alias opstart='sudo service openproject-ce start'
+alias opstop='sudo service openproject-ce stop'
 
 alias updateos='sudo apt-get update && sudo apt-get upgrade -f -y --force-yes && sudo apt-get autoclean'
 alias open='gnome-open'
@@ -22,6 +31,10 @@ alias ping='ping -c 5'
 alias cl='clear'
 alias please='sudo'
 alias aptinstall='apt-get install'
+
+alias opassetsprecomp='sudo openproject-ce run assets:precompile'
+alias apachestart='/etc/init.d/apache2 start'
+alias apachestop='/etc/init.d/apache2 stop'
 
 #                     ________.______________
 #                    /  _____/|   \__    ___/
@@ -86,7 +99,7 @@ extract() {
 
 # Changes to a directory and lists its contents.
 cdls () {
-  builtin cd "$argv[-1]" && ls "${(@)argv[1,-2]}"
+  cd "$1" && la
 }
 
 
