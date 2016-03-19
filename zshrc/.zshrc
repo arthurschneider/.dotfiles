@@ -20,6 +20,9 @@ ZSH_THEME="ruhtra"
 # Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Run matrix screensaver on terminal startup
+cmatrix
+
 #############################################################
 ###########################OPTIONS###########################
 
