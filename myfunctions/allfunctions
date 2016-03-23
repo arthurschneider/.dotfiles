@@ -7,3 +7,5 @@ source $HOME/.dotfiles/myfunctions/function_targz
 source $HOME/.dotfiles/myfunctions/function_shelltips
 
 source $HOME/.dotfiles/myfunctions/function_cdls
+
+source $HOME/.dotfiles/myfunctions/function_generate-ssh-key
