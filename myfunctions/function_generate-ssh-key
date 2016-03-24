@@ -1,3 +1,5 @@
 generate-ssh-key(){
   ssh-keygen -t rsa -b 4096 -C $1
+  echo "To copy key to server just use command: "
+  echo "ssh-copy-id -i identity_file <four file> <user@server.com>"
 }
