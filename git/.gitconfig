@@ -3,6 +3,12 @@
 	email = dev.schneiart@gmail.com
 [core]
 	editor = vim
+	autocrlf = input
 [alias]
 	la = log
 	save = !git add -A && git commit -m "SAVEPOINT"
+	lg = log --oneline --decorate --all --graph
+[color]
+	ui = true
+[pull]
+	rebase = true
