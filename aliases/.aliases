@@ -27,7 +27,7 @@ alias glog='git log'
 alias gunstage='git reset HEAD -- .'
 alias gsave='git add -A && git commit -m "SAVEPOINT"'
 alias ggraph='git log --graph --oneline --decorate --all'
-
+alias gco='git checkout'
 #              .____    .___ _______   ____ _______  ___
 #              |    |   |   |\      \ |    |   \   \/  /
 #              |    |   |   |/   |   \|    |   /\     /
