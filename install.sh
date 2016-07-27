@@ -35,10 +35,12 @@ link_the_files(){
 
 
   echo "Creating symlink for my theme in oh-my-zsh directory"
+  mkdir ~/.dotfiles/.oh-my-zsh/custom/themes/
   cd ~/.dotfiles/.oh-my-zsh/custom/themes/
   ln -s ~/.dotfiles/zshrc/ruhtra.zsh-theme ruhtra.zsh-theme
 
   echo "Creating symlinks for atom dotfiles"
+  atom
   cd ~/.atom/
   ln -s ~/.dotfiles/atom/config.cson config.cson
   ln -s ~/.dotfiles/atom/init.coffee init.coffee
@@ -52,12 +54,12 @@ link_the_files(){
 
 ############## Main ############
 
-backup_oldfiles
-link_the_files
-
 # download all the submodules
 cd $HOME/.dotfiles
-git submodule update
+git submodule update --init
+
+backup_oldfiles
+link_the_files
 
 # enable all the .dotfiles
 source ~/.zshrc
