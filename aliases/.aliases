@@ -56,6 +56,7 @@ alias please='sudo'
 
 alias openmakeys='keepassx ~/Dropbox/passwordList.kdb'
 alias aptinstall='sudo apt-get install'
+alias happyend='sudo shutdown -h 1'
 
 #        __________    _____  .___.____       _________
 #        \______   \  /  _  \ |   |    |     /   _____/
