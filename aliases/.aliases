@@ -28,6 +28,8 @@ alias gunstage='git reset HEAD -- .'
 alias gsave='git add -A && git commit -m "SAVEPOINT"'
 alias ggraph='git log --graph --oneline --decorate --all'
 alias gco='git checkout'
+
+
 #              .____    .___ _______   ____ _______  ___
 #              |    |   |   |\      \ |    |   \   \/  /
 #              |    |   |   |/   |   \|    |   /\     /
@@ -58,6 +60,7 @@ alias openmakeys='keepassx ~/Dropbox/passwordList.kdb'
 alias aptinstall='sudo apt-get install'
 alias happyend='sudo shutdown -h 1'
 
+
 #        __________    _____  .___.____       _________
 #        \______   \  /  _  \ |   |    |     /   _____/
 #         |       _/ /  /_\  \|   |    |     \_____  \
@@ -79,6 +82,7 @@ alias rrgm='rails generate model'
 
 alias rv='ruby --version'
 
+
 #  ____   _________    __________________    _____    __________________
 #  \   \ /   /  _  \  /  _____/\______   \  /  _  \   \      \__    ___/
 #   \   Y   /  /_\  \/   \  ___ |       _/ /  /_\  \  /   |   \|    |
@@ -95,6 +99,7 @@ alias vdestroy='vagrant destroy'
 alias  vstatus='vagrant status'
 alias       vp='vagrant provision'
 alias       vr='vagrant reload'
+
 
 #                 _______ __________  _____
 #                 \      \\______   \/     \
