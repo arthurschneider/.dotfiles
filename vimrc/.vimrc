@@ -34,7 +34,7 @@ set lbr
 set tw=80
 
 " show vertical red line to show the 81st character
-set colorcolumn=81
+set colorcolumn=101
 
 " Set Linenumber by default
 set number
