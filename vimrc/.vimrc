@@ -1,4 +1,6 @@
-"return" 2>&- || "exit"
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
 
 " Ignore case when searching
 set ignorecase
@@ -31,7 +33,7 @@ set tabstop=2
 
 " Linebreak on 80 characters
 set lbr
-set tw=80
+set tw=101
 
 " show vertical red line to show the 81st character
 set colorcolumn=101
@@ -69,7 +71,7 @@ set ruler
 set background=dark
 
 " set colorschme
-"colorscheme jellybeans
+" colorscheme jellybeans
 
 " Set title
 set title
