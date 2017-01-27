@@ -21,7 +21,7 @@ ZSH_THEME="ruhtra"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Enables autoenv when /launches some env for special folders
-source ~/.autoenv/activate.sh
+# source ~/.autoenv/activate.sh
 
 # Run matrix screensaver on terminal startup
 cmatrix -bsx
@@ -75,5 +75,8 @@ setopt AUTO_MENU
 #############################################################
 ############################RVM OPTIONS######################
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
+
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
