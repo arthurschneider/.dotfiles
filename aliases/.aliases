@@ -59,6 +59,9 @@ alias please='sudo'
 alias openmakeys='keepassx ~/Dropbox/passwordList.kdbx'
 alias aptinstall='sudo apt-get install'
 alias happyend='sudo shutdown -h 1'
+alias nitro_status='gpg --card-status'
+alias nitro_pin='gpg --change-pin'
+alias nitro_edit='gpg --card-edit'
 
 
 #        __________    _____  .___.____       _________
