@@ -29,6 +29,17 @@ alias gsave='git add -A && git commit -m "SAVEPOINT"'
 alias ggraph='git log --graph --oneline --decorate --all'
 alias gco='git checkout'
 
+alias gflofs='git flow feature start'
+alias gfloff='git flow feature finish'
+alias gflofp='git flow feature publish'
+alias gflors='git flow release start'
+alias gflorp='git flow release publish'
+
+alias gflorf='git flow release finish'
+alias gflohs='git flow hotfix start'
+alias gflohf='git flow hotfix finish'
+alias gfloi='git flow init'
+
 
 #              .____    .___ _______   ____ _______  ___
 #              |    |   |   |\      \ |    |   \   \/  /
