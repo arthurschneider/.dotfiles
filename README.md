@@ -1,9 +1,9 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/arthurschneider/.dotfiles/master/dotfiles_logo.png" alt=".dotfiles Logo"/>
 </p>
-##### Collection of my dotfiles
 
-</br>
+### Collection of my dotfiles
+
 #### Usage
  First step is to download the files.  
  Go to your home directory and run:
@@ -12,16 +12,11 @@ git clone git@github.com:arthurschneider/.dotfiles.git
 ```
 
 
-After that step you need to run the setup_dotfiles.sh script.  
+After that step you need to run the install.sh script.  
 Run these commands
 ```bash
 cd .dotfiles
-./setup_dotfiles.sh
+./install.sh
 ```
->This script will set symbolic links.  
+>This script will set symbolic links and clone oh-my-zsh plugin.  
 >So the dotfiles will remain in the .dotfiles directory.
-
-At the end you need to activate the aliases and themes by:
-```bash
-source ~/.zshrc
-```
