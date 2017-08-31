@@ -1,4 +1,6 @@
-#!/bin/bash
+#! /bin/bash
+
+# This script installs and enables my dotfiles
 
 dir=~/.dotfiles
 olddir=~/.dotfiles_old
@@ -29,16 +31,17 @@ link_gitconfig(){
   ln -s $dir/git/.gitconfig ~/.gitconfig
 }
 
-set_my_zsh_theme(){
-  echo "Creating symlink for my theme in oh-my-zsh directory"
-  mkdir ~/.oh-my-zsh/custom/themes/
-  cd ~/.oh-my-zsh/custom/themes/
-  ln -s ~/.dotfiles/zshrc/ruhtra.zsh-theme ruhtra.zsh-theme
-}
-
 install_oh_my_zsh(){
   cd ~
   git clone git@github.com:robbyrussell/oh-my-zsh.git
+}
+
+set_my_zsh_theme(){
+  echo "Creating symlink for my theme in oh-my-zsh directory"
+  cd ~/oh-my-zsh/
+  mkdir -p ~/oh-my-zsh/custom/themes/
+  cd ~/oh-my-zsh/custom/themes/
+  ln -s ~/.dotfiles/zshrc/ruhtra.zsh-theme ruhtra.zsh-theme
 }
 
 enable_my_configs(){
