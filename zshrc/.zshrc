@@ -24,7 +24,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # source ~/.autoenv/activate.sh
 
 # Enables oh-my-zsh plugins
-plugins=(git-flow)
+plugins=(git-flow mvn)
 
 #############################################################
 ###########################OPTIONS###########################
