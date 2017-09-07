@@ -48,28 +48,25 @@ alias gfloi='git flow init'
 #              |_______ \___\____|__  /______/ /___/\  \
 #                      \/           \/               \_/
 
-alias la='ls -alh'
-alias al='ls -alh'
+alias la='ls -alhF'
+alias al='ls -alhF'
+alias lt='ls -alhtF'
 alias vi='vim'
-alias ev='$EDITOR ~/.vimrc'
-alias sv='source ~/.vimrc'
+alias vimrc='$EDITOR ~/.vimrc'
 
-alias ez='$EDITOR ~/.zshrc'
+alias sv='source ~/.vimrc'
+alias zshrc='$EDITOR ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias k9='kill -9'
 alias code='cd ~/Code'
-alias mkd='mkdir'
-alias q='exit'
 
+alias mkd='mkdir'
 alias updateos='sudo apt update && sudo apt upgrade && sudo apt autoclean && sudo apt autoremove'
 alias open='gnome-open'
 alias ping='ping -c 5'
-alias cl='clear'
-alias please='sudo'
-
 alias openmakeys='keepassx ~/Dropbox/passwordList.kdbx'
+
 alias aptinstall='sudo apt-get install'
-alias happyend='sudo shutdown -h 1'
 alias nitro_status='gpg --card-status'
 alias nitro_pin='gpg --change-pin'
 alias nitro_edit='gpg --card-edit'

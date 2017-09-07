@@ -20,8 +20,8 @@ ZSH_THEME="ruhtra"
 # Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Enables autoenv when /launches some env for special folders
-# source ~/.autoenv/activate.sh
+# Enables oh-my-zsh plugins
+plugins=(git-flow mvn)
 
 #############################################################
 ###########################OPTIONS###########################
