@@ -23,6 +23,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Enables autoenv when /launches some env for special folders
 # source ~/.autoenv/activate.sh
 
+# Enables oh-my-zsh plugins
+plugins=(git-flow)
+
 #############################################################
 ###########################OPTIONS###########################
 
