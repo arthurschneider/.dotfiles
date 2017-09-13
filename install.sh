@@ -46,7 +46,6 @@ set_my_zsh_theme(){
 
 enable_my_configs(){
   source ~/.zshrc
-  echo "Everything done try it out!"
 }
 
 backup_old_files
@@ -60,3 +59,6 @@ install_oh_my_zsh
 set_my_zsh_theme
 
 enable_my_configs
+
+echo "Everything done try it out!"
+
