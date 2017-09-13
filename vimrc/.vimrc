@@ -70,9 +70,9 @@ set ruler
 " Any other value is illegal.
 set background=dark
 
-" set colorschme
-" colorscheme jellybeans
-
+" Enable markdown plugin
+" https://github.com/suan/vim-instant-markdown
+filetype plugin on
 " Set title
 set title
 set titleold=""
