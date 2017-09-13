@@ -44,6 +44,20 @@ set_my_zsh_theme(){
   ln -s ~/.dotfiles/zshrc/ruhtra.zsh-theme ruhtra.zsh-theme
 }
 
+install_markdown_plugin_for_vim(){
+  sudo apt-get install xdg-utils
+  sudo apt-get install nodejs-legacy
+  sudo apt-get install curl
+
+  mkdir -p ~/.vim/after/ftplugin/markdown/
+
+  sudo npm -g install instant-markdown-d
+
+  wget -t 2 https://raw.githubusercontent.com/suan/vim-instant-markdown/master/after/ftplugin/markdown/instant-markdown.vim
+
+  mv instant-markdown.vim ~/.vim/after/ftplugin/markdown/
+}
+
 enable_my_configs(){
   source ~/.zshrc
 }
