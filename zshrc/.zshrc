@@ -5,9 +5,6 @@ ZSH=~/oh-my-zsh
 ZSH_THEME="ruhtra"
 . $ZSH/oh-my-zsh.sh
 
-# Add z plugin
-. $DOTFILES/zshrc/z.sh
-
 # Add syntax highlighting plugin
 . $DOTFILES/zshrc/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
@@ -21,7 +18,7 @@ ZSH_THEME="ruhtra"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Enables oh-my-zsh plugins
-plugins=(git-flow mvn)
+plugins=(z git-flow mvn)
 
 #############################################################
 ###########################OPTIONS###########################

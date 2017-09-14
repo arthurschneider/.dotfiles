@@ -11,15 +11,13 @@ alias gap='git add -p'
 alias gb='git branch'
 alias gcom='git checkout master'
 
-alias gcod='git checkout development'
+alias gcod='git checkout develop'
 alias gcob='git checkout -b'
 alias gc='git commit'
-alias gcm='git commit -m'
-alias gcam='git commit -am'
 
 alias gpo='git push origin'
 alias gpom='git push origin master'
-alias gpod='git push origin development'
+alias gpod='git push origin develop'
 alias gd='git diff'
 alias gs='git status'
 
@@ -28,17 +26,6 @@ alias gunstage='git reset HEAD -- .'
 alias gsave='git add -A && git commit -m "SAVEPOINT"'
 alias ggraph='git log --graph --oneline --decorate --all'
 alias gco='git checkout'
-
-alias gflofs='git flow feature start'
-alias gfloff='git flow feature finish'
-alias gflofp='git flow feature publish'
-alias gflors='git flow release start'
-alias gflorp='git flow release publish'
-
-alias gflorf='git flow release finish'
-alias gflohs='git flow hotfix start'
-alias gflohf='git flow hotfix finish'
-alias gfloi='git flow init'
 
 
 #              .____    .___ _______   ____ _______  ___
