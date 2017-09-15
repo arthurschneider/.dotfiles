@@ -73,7 +73,17 @@ set background=dark
 " Enable markdown plugin
 " https://github.com/suan/vim-instant-markdown
 filetype plugin on
+
 " Set title
 set title
 set titleold=""
 set fileformats="unix,dos,mac"
+
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+call plug#end()
+
+" With STRG+n will toggle nerdtree
+map <C-n> :NERDTreeToggle<CR>
