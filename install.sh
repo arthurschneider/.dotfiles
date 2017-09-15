@@ -58,6 +58,10 @@ install_markdown_plugin_for_vim(){
   mv instant-markdown.vim ~/.vim/after/ftplugin/markdown/
 }
 
+install_vim_plug_tool(){
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+}
+
 enable_my_configs(){
   source ~/.zshrc
 }
@@ -71,6 +75,8 @@ link_gitconfig
 install_oh_my_zsh
 
 set_my_zsh_theme
+
+install_vim_plug_tool
 
 enable_my_configs
 
