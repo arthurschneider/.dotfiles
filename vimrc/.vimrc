@@ -90,3 +90,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " The file endings will be ignored by nerdtree
 let NERDTreeIgnore = ['\.swp$']
+
+" Nerdtree will always show hidden files by launch
+let NERDTreeShowHidden=1
