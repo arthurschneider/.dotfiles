@@ -87,3 +87,6 @@ call plug#end()
 
 " With STRG+n will toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+" The file endings will be ignored by nerdtree
+let NERDTreeIgnore = ['\.swp$']
