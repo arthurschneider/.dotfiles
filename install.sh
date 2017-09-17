@@ -1,12 +1,34 @@
 #! /bin/bash
 
-# This script installs and enables my dotfiles
+set -euo pipefail
+IFS=$'\n\t'
+
+#/ Usage: just start the script. You will be asked to put in your root password. Do it!
+#/
+#/ Description: This script will install some packages or download some software.
+#/              It will also set some symlinks in your users home directory.
+#/
+#/ Examples: -
+#/
+#/ Options:
+#/    --help: Display this help message
+usage() { grep '^#/' "$0" | cut -c4- ; exit 0; }
+expr "$*" : ".*--help" > /dev/null && usage
+
+
+readonly LOG_FILE="./$(basename "$0").log"
+info()    { echo "[INFO]    $*" | tee -a "$LOG_FILE" >&2 ; }
+warning() { echo "[WARNING] $*" | tee -a "$LOG_FILE" >&2 ; }
+error()   { echo "[ERROR]   $*" | tee -a "$LOG_FILE" >&2 ; }
+fatal()   { echo "[FATAL]   $*" | tee -a "$LOG_FILE" >&2 ; exit 1 ; }
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
 
 dir=~/.dotfiles
 olddir=~/.dotfiles_old
 files="vimrc zshrc"
-user=$USERNAME
-
 
 backup_old_files(){
  mkdir -p $olddir
@@ -14,14 +36,14 @@ backup_old_files(){
 
  for file in $files; do
      echo "Moving any existing dotfiles from ~ to $olddir"
-     mv ~/.$file ~/.dotfiles_old/
+     mv ~/."$file" ~/.dotfiles_old/
  done
 }
 
 link_the_files(){
   for file in $files; do
     echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file/.$file ~/.$file
+    ln -s "$dir"/"$file"/."$file" ~/."$file"
   done
 }
 
