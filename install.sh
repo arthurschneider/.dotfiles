@@ -29,8 +29,6 @@ fatal()   { echo "[FATAL]   $*" | tee -a "$LOG_FILE" >&2 ; exit 1 ; }
 dir=~/.dotfiles
 olddir=~/.dotfiles_old
 files="vimrc zshrc"
-user=$USERNAME
-
 
 backup_old_files(){
  mkdir -p $olddir
@@ -38,14 +36,14 @@ backup_old_files(){
 
  for file in $files; do
      echo "Moving any existing dotfiles from ~ to $olddir"
-     mv ~/.$file ~/.dotfiles_old/
+     mv ~/."$file" ~/.dotfiles_old/
  done
 }
 
 link_the_files(){
   for file in $files; do
     echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file/.$file ~/.$file
+    ln -s "$dir"/"$file"/."$file" ~/."$file"
   done
 }
 
