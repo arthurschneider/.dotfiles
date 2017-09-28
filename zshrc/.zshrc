@@ -1,6 +1,9 @@
 DOTFILES=$HOME/.dotfiles
 ZSH=~/oh-my-zsh
 
+# Enables oh-my-zsh plugins
+plugins=(z git-flow mvn)
+
 # Set ZSH Theme
 ZSH_THEME="ruhtra"
 . $ZSH/oh-my-zsh.sh
@@ -16,9 +19,6 @@ ZSH_THEME="ruhtra"
 
 # Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Enables oh-my-zsh plugins
-plugins=(z git-flow mvn)
 
 #############################################################
 ###########################OPTIONS###########################
