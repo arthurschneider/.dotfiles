@@ -59,6 +59,9 @@ alias aptinstall='sudo apt-get install'
 alias nitro_status='gpg --card-status'
 alias nitro_pin='gpg --change-pin'
 alias nitro_edit='gpg --card-edit'
+alias tlf='tail -f'
+
+alias path="echo $PATH | tr -s ':' '\n'"
 
 
 #        __________    _____  .___.____       _________

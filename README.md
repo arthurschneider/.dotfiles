@@ -4,8 +4,8 @@
 
 ### Collection of my dotfiles
 
-#### Usage
- First step is to download the files.  
+#### Setup
+ First step is to download the files from repository.  
  Go to your home directory and run:
 ```bash
 git clone git@github.com:arthurschneider/.dotfiles.git
@@ -18,5 +18,9 @@ Run these commands
 cd .dotfiles
 ./install.sh
 ```
->This script will set symbolic links and clone oh-my-zsh plugin.  
->So the dotfiles will remain in the .dotfiles directory.
+
+#### Short version
+```
+git clone git@github.com:arthurschneider/.dotfiles.git ~/.dotfiles && cd ~/.dotfiles && ./install.sh
+```
+
