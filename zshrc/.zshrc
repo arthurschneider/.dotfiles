@@ -15,7 +15,9 @@ ZSH_THEME="ruhtra"
 . $DOTFILES/aliases/.aliases
 
 # Import functions from .dotfiles
-. $DOTFILES/myfunctions/allfunctions
+for function in $DOTFILES/myfunctions/*; do
+  source $function
+done
 
 # Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:$PATH
