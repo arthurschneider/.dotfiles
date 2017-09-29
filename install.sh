@@ -67,10 +67,6 @@ set_my_zsh_theme(){
 }
 
 install_markdown_plugin_for_vim(){
-  sudo apt-get install xdg-utils
-  sudo apt-get install nodejs-legacy
-  sudo apt-get install curl
-
   mkdir -p ~/.vim/after/ftplugin/markdown/
 
   sudo npm -g install instant-markdown-d
@@ -97,6 +93,8 @@ link_gitconfig
 install_oh_my_zsh
 
 set_my_zsh_theme
+
+install_markdown_plugin_for_vim
 
 install_vim_plug_tool
 
