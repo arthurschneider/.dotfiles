@@ -39,7 +39,7 @@ set tw=101
 set colorcolumn=101
 
 " Set Linenumber by default
-set number
+set number relativenumber
 
 " Better command-line completion
 set wildmenu
