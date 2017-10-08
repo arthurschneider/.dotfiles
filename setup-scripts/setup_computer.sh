@@ -35,6 +35,15 @@ install_package(){
     sudo apt-get install -y "$2"
 }
 
+install_ranger(){
+  sudo apt update
+  sudo apt install ranger caca-utils highlight atool w3m poppler-utils mediainfo
+
+  ranger&
+  kill -9 $(pgrep ranger)
+  ranger --copy-config=all
+}
+
 echo "Starting the Setup ...!"
 
 sudo apt-get update; sudo apt-get upgrade -f -y --force-yes
@@ -89,6 +98,8 @@ chsh -s /bin/zsh
 chsh -s /bin/zsh $USER
 
 sudo npm install --global trash-cli
+
+install_ranger
 
 echo ""
 echo "PACKAGES THAT ARE NOT NEEDED ANYMORE WILL BE REMOVED"
