@@ -1,0 +1,8 @@
+search Dev
+zh
+open
+open .
+h
+rename zshrc
+
+shell open .

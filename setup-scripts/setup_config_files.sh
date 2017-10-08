@@ -80,6 +80,10 @@ install_vim_plug_tool(){
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
+copy_ranger_dotfiles(){
+  cp -R ~/.dotfiles/ranger ~/.config/ranger
+}
+
 enable_my_configs(){
   source ~/.zshrc
 }
@@ -97,6 +101,8 @@ set_my_zsh_theme
 install_markdown_plugin_for_vim
 
 install_vim_plug_tool
+
+copy_ranger_dotfiles
 
 enable_my_configs
 
