@@ -2,7 +2,7 @@ DOTFILES=$HOME/.dotfiles
 ZSH=~/.oh-my-zsh
 
 # Enables oh-my-zsh plugins
-plugins=(z git-flow mvn)
+plugins=(git-flow mvn)
 
 # Set ZSH Theme
 ZSH_THEME="ruhtra"
@@ -19,12 +19,16 @@ for function in $DOTFILES/myfunctions/*; do
   source $function
 done
 
+# add autojump
+source /usr/share/autojump/autojump.zsh
+
 # Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 #############################################################
 ###########################OPTIONS###########################
-
+# Set command line editing to vi style key bindings
+set -o vi
 # If you type foo, and it isn't a command,
 # and it is a directory in your cdpath go there
 setopt AUTO_CD

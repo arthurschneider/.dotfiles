@@ -21,7 +21,7 @@ function gits() {
 }
 
 function ends() {
-  echo "$FG[208]%(!.=>.>>)%{$reset_color%}"
+  echo "$FG[208]%(!.=>.>>)\n %{$reset_color%}"
 }
 
 
