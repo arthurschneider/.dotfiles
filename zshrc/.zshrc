@@ -1,5 +1,5 @@
 DOTFILES=$HOME/.dotfiles
-ZSH=~/.oh-my-zsh
+ZSH=~/oh-my-zsh
 
 # Enables oh-my-zsh plugins
 plugins=(git-flow mvn)
@@ -19,7 +19,7 @@ for function in $DOTFILES/myfunctions/*; do
   source $function
 done
 
-# add autojump
+# source autojump
 source /usr/share/autojump/autojump.zsh
 
 # Customize to your needs...
