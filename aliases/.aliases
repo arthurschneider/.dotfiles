@@ -29,6 +29,8 @@ alias gsave='git add -A && git commit -m "SAVEPOINT"'
 alias ggraph='git log --graph --oneline --decorate --all'
 alias gco='git checkout'
 
+alias gitremotes="git remote update origin --prune; git branch -r"
+
 
 #              .____    .___ _______   ____ _______  ___
 #              |    |   |   |\      \ |    |   \   \/  /
