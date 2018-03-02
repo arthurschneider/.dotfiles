@@ -30,6 +30,9 @@ alias ggraph='git log --graph --oneline --decorate --all'
 alias gco='git checkout'
 
 alias gitremotes="git remote update origin --prune; git branch -r"
+alias githead="git show HEAD"
+alias githead1="git show HEAD~1"
+alias githead2="git show HEAD~2"
 
 
 #              .____    .___ _______   ____ _______  ___
