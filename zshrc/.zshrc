@@ -1,5 +1,5 @@
 DOTFILES=$HOME/.dotfiles
-ZSH=~/oh-my-zsh
+ZSH=~/.oh-my-zsh
 
 # Enables oh-my-zsh plugins
 plugins=(git-flow mvn)
