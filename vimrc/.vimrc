@@ -28,15 +28,15 @@ set list
 set listchars=tab:›\ ,eol:¬,trail:⋅
 
 " 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
-" Linebreak on 100 characters
+" Linebreak on 120 characters
 set lbr
-set tw=101
+set tw=121
 
-" show vertical red line to show the 101st character
-set colorcolumn=101
+" show vertical red line to show the 121st character
+set colorcolumn=121
 
 " Set Linenumber by default
 set number relativenumber
@@ -69,6 +69,10 @@ set ruler
 " try to use colors that look good on a light background.
 " Any other value is illegal.
 set background=dark
+
+" User the solorized theme
+" https://github.com/altercation/vim-colors-solarized
+colorscheme solarized
 
 " Enable markdown plugin
 " https://github.com/suan/vim-instant-markdown
