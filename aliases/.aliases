@@ -29,6 +29,11 @@ alias gsave='git add -A && git commit -m "SAVEPOINT"'
 alias ggraph='git log --graph --oneline --decorate --all'
 alias gco='git checkout'
 
+alias gitremotes="git remote update origin --prune; git branch -r"
+alias githead="git show HEAD"
+alias githead1="git show HEAD~1"
+alias githead2="git show HEAD~2"
+
 
 #              .____    .___ _______   ____ _______  ___
 #              |    |   |   |\      \ |    |   \   \/  /
@@ -53,14 +58,12 @@ alias mkd='mkdir'
 alias updateos='sudo apt update && sudo apt upgrade && sudo apt autoclean && sudo apt autoremove'
 alias open='gnome-open'
 alias ping='ping -c 5'
-alias openmakeys='keepassx ~/Dropbox/passwordList.kdbx'
-
 alias aptinstall='sudo apt-get install'
+
 alias nitro_status='gpg --card-status'
 alias nitro_pin='gpg --change-pin'
 alias nitro_edit='gpg --card-edit'
 alias tlf='tail -f'
-
 alias path="echo $PATH | tr -s ':' '\n'"
 
 

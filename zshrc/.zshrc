@@ -1,5 +1,5 @@
 DOTFILES=$HOME/.dotfiles
-ZSH=~/oh-my-zsh
+ZSH=~/.oh-my-zsh
 
 # Enables oh-my-zsh plugins
 plugins=(git-flow mvn)
@@ -78,3 +78,5 @@ export VISUAL=/usr/bin/vim
 ############################RVM OPTIONS######################
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
