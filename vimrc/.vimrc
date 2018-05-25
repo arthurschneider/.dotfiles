@@ -43,6 +43,7 @@ set number relativenumber
 
 " Better command-line completion
 set wildmenu
+set wildmode=full
 
 " Enable syntax highlighting
 syntax on
@@ -63,6 +64,9 @@ set cmdheight=2
 " Show the line and column number of the cursor position,
 " separated by a comma.
 set ruler
+
+" Set the history to the size of 200 instead of 20
+set history=200
 
 " When set to "dark", Vim will try to use colors that look
 " good on a dark background. When set to "light", Vim will
@@ -87,9 +91,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-unimpaired'
 call plug#end()
 
-" With STRG+n will toggle nerdtree
+" The combination Ctrl+n will toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
 " The file endings will be ignored by nerdtree
