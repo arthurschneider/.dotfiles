@@ -1,0 +1,4 @@
+# Changes to a directory and lists its contents.
+cheatsh () {
+  curl cht.sh/"$argv[-1]"
+}
