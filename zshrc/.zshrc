@@ -1,6 +1,10 @@
 DOTFILES=$HOME/.dotfiles
 ZSH=~/.oh-my-zsh
 
+#export NVIM_TUI_ENABLE_TRUE_COLOR=1
+export TERM=xterm-256color
+export COLORTERM=truecolor
+
 # Enables oh-my-zsh plugins
 plugins=(git-flow mvn)
 
