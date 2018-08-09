@@ -78,9 +78,13 @@ set background=dark
 " https://github.com/altercation/vim-colors-solarized
 colorscheme solarized
 
-" Enable markdown plugin
-" https://github.com/suan/vim-instant-markdown
+" Enable default plugins
+set nocompatible
 filetype plugin on
+
+
+" Enable matchit default vim plugin
+runtime macros/matchit.vim
 
 " Set title
 set title
