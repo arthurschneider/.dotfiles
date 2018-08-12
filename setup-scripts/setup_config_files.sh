@@ -36,7 +36,7 @@ backup_old_files(){
 
  for file in $files; do
      echo "Moving any existing dotfiles from ~ to $olddir"
-     mv ~/."$file" ~/.dotfiles_old/
+     mv ~/."$file" $olddir
  done
 }
 
