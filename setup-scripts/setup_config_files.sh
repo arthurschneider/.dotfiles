@@ -28,7 +28,7 @@ fatal()   { echo "[FATAL]   $*" | tee -a "$LOG_FILE" >&2 ; exit 1 ; }
 
 dir=~/.dotfiles
 olddir=~/.dotfiles_old
-files="vimrc zshrc"
+files="vimrc zshrc tmux"
 
 backup_old_files(){
  mkdir -p $olddir
