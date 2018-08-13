@@ -12,7 +12,6 @@ alias gb='git branch'
 alias gcom='git checkout master'
 
 alias gcod='git checkout develop'
-alias gcob='git checkout -b'
 alias gc='git commit'
 alias gptg='git push --tags'
 alias gtags='git tag -n99'
@@ -67,28 +66,6 @@ alias tlf='tail -f'
 alias path="echo $PATH | tr -s ':' '\n'"
 
 
-#        __________    _____  .___.____       _________
-#        \______   \  /  _  \ |   |    |     /   _____/
-#         |       _/ /  /_\  \|   |    |     \_____  \
-#         |    |   \/    |    \   |    |___  /        \
-#         |____|_  /\____|__  /___|_______ \/_______  /
-#                \/         \/            \/        \/
-#           __________ ____ __________________.___.
-#           \______   \    |   \______   \__  |   |
-#            |       _/    |   /|    |  _//   |   |
-#            |    |   \    |  / |    |   \\____   |
-#            |____|_  /______/  |______  // ______|
-#                   \/                 \/ \/
-
-alias  rrs='rails server'
-alias  rrc='rails console'
-alias  rrg='rails generate'
-alias rrgc='rails generate controller'
-alias rrgm='rails generate model'
-
-alias rv='ruby --version'
-
-
 #  ____   _________    __________________    _____    __________________
 #  \   \ /   /  _  \  /  _____/\______   \  /  _  \   \      \__    ___/
 #   \   Y   /  /_\  \/   \  ___ |       _/ /  /_\  \  /   |   \|    |
@@ -107,14 +84,12 @@ alias       vp='vagrant provision'
 alias       vr='vagrant reload'
 
 
-#                 _______ __________  _____
-#                 \      \\______   \/     \
-#                 /   |   \|     ___/  \ /  \
-#                /    |    \    |  /    Y    \
-#                \____|__  /____|  \____|__  /
-#                        \/                \/
+#            ________________   ____ _______  ___
+#            \__    ___/     \ |    |   \   \/  /
+#              |    | /  \ /  \|    |   /\     /
+#              |    |/    Y    \    |  / /     \
+#              |____|\____|__  /______/ /___/\  \
+#                            \/               \_/
 
-alias ninst='npm install'
-alias nup='npm start'
-alias nv='npm -v'
-
+alias mux='tmuxinator'
+alias muxls='tmux ls'
