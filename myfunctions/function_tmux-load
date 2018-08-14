@@ -1,0 +1,11 @@
+function tmux_load(){
+
+    if [ -f ~/.dotfiles/tmux/enviroments/$1 ]; then
+        tmux -f ~/.dotfiles/tmux/enviroments/$1 a
+    fi
+
+    if [ -f ~/.dotfiles/tmux/enviroments/$1.conf ]; then
+        tmux -f ~/.dotfiles/tmux/enviroments/$1.conf a
+    fi
+
+}
