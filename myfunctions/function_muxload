@@ -1,4 +1,4 @@
-function tmux_load(){
+function muxload(){
 
     if [ -f ~/.dotfiles/tmux/enviroments/$1 ]; then
         tmux -f ~/.dotfiles/tmux/enviroments/$1 a

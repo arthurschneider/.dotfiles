@@ -91,5 +91,5 @@ alias       vr='vagrant reload'
 #              |____|\____|__  /______/ /___/\  \
 #                            \/               \_/
 
-alias mux='tmuxinator'
 alias muxls='tmux ls'
+alias muxkills='tmux kill-session'
