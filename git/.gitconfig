@@ -1,14 +1,15 @@
-[user]
-	name = Arthur Schneider
-	email = dev.schneiart@gmail.com
 [core]
 	editor = vim
 	autocrlf = input
 [alias]
-	la = log
 	save = !git add -A && git commit -m "SAVEPOINT"
 	lg = log --oneline --decorate --all --graph
 [color]
 	ui = true
 [pull]
 	rebase = true
+    path = .gitconfig_work
+    path = .gitconfig_private
+
+[user]
+	useConfigOnly = true
