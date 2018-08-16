@@ -51,7 +51,7 @@ alias sv='source ~/.vimrc'
 alias zshrc='$EDITOR ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias k9='kill -9'
-alias code='cd ~/Code'
+alias tlf='tail -f'
 
 alias mkd='mkdir'
 alias updateos='sudo apt update && sudo apt upgrade && sudo apt autoclean && sudo apt autoremove'
@@ -62,7 +62,6 @@ alias aptinstall='sudo apt-get install'
 alias nitro_status='gpg --card-status'
 alias nitro_pin='gpg --change-pin'
 alias nitro_edit='gpg --card-edit'
-alias tlf='tail -f'
 alias path="echo $PATH | tr -s ':' '\n'"
 
 
