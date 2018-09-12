@@ -68,6 +68,8 @@ install_package XDG-UTILS xdg-utils
 
 install_package VIM vim
 
+install_package VIM-GTK vim-gtk
+
 install_package ZSH zsh
 
 install_package GIT git
