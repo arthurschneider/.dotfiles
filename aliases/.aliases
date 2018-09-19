@@ -90,5 +90,6 @@ alias       vr='vagrant reload'
 #              |____|\____|__  /______/ /___/\  \
 #                            \/               \_/
 
-alias muxls='tmux ls'
-alias muxkills='tmux kill-session'
+alias muxls='tmux -2 ls'
+alias muxkills='tmux -2 kill-session'
+alias tmux='tmux -2'
