@@ -1,7 +1,7 @@
 openmakeys(){
   if [ $(hostname) = "dell" ]; then
-    $(keepassx /home/aschneider/Dropbox/passwordWork.kdbx)
+    keepassx /home/aschneider/Dropbox/passwordWork.kdbx&
   else
-    $(keepassx /home/arthur/Dropbox/passwordHome.kdbx)
+    keepassx /home/arthur/Dropbox/passwordHome.kdbx&
   fi
 }
