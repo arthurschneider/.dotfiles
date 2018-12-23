@@ -55,7 +55,6 @@ alias tlf='tail -f'
 
 alias mkd='mkdir'
 alias updateos='sudo apt update && sudo apt upgrade && sudo apt autoclean && sudo apt autoremove'
-alias open='f(){ nohup gnome-open "$1" &>/dev/null; unset -f f }; f'
 alias ping='ping -c 5'
 alias aptinstall='sudo apt-get install'
 
