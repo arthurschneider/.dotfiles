@@ -56,12 +56,6 @@ install_package KEEPASS keepassx
 
 install_package TMUX tmux
 
-install_package NODEJS nodejs
-
-install_package VAGRANT vagrant
-
-install_package VIRTUALBOX_5.0 virtualbox_5.0
-
 install_package CURL curl
 
 install_package XDG-UTILS xdg-utils
@@ -74,27 +68,15 @@ install_package ZSH zsh
 
 install_package GIT git
 
-install_package NODEJS nodejs
-
-install_package NODEJS-DEV nodejs-dev
-
-install_package NODEJS-LEGACY nodejs-legacy
-
-install_package NPM npm
-
 install_package HTOP htop
 
 install_package NCDU ncdu
 
-install_package MIDNIGHT-COMMANDER mc
-
-install_package CMATRIX cmatrix
-
 install_package DROPBOX nautilus-dropbox
 
-install_package TERMINATOR terminator
-
 install_package WORKBENCH mysql-workbench
+
+install_package DMENU dmenu
 
 chsh -s /bin/zsh
 chsh -s /bin/zsh $USER
