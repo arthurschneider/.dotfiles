@@ -51,35 +51,15 @@ alias sv='source ~/.vimrc'
 alias zshrc='$EDITOR ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias k9='kill -9'
-alias tlf='tail -f'
 
 alias mkd='mkdir'
 alias updateos='sudo apt update && sudo apt upgrade && sudo apt autoclean && sudo apt autoremove'
 alias ping='ping -c 5'
-alias aptinstall='sudo apt-get install'
 
 alias nitro_status='gpg --card-status'
 alias nitro_pin='gpg --change-pin'
 alias nitro_edit='gpg --card-edit'
 alias path="echo $PATH | tr -s ':' '\n'"
-
-
-#  ____   _________    __________________    _____    __________________
-#  \   \ /   /  _  \  /  _____/\______   \  /  _  \   \      \__    ___/
-#   \   Y   /  /_\  \/   \  ___ |       _/ /  /_\  \  /   |   \|    |
-#    \     /    |    \    \_\  \|    |   \/    |    \/    |    \    |
-#     \___/\____|__  /\______  /|____|_  /\____|__  /\____|__  /____|
-#                  \/        \/        \/         \/         \/
-
-alias    vinit='vagrant init'
-alias      vup='vagrant up'
-alias     vssh='vagrant ssh'
-alias    vhalt='vagrant halt'
-alias vdestroy='vagrant destroy'
-
-alias  vstatus='vagrant status'
-alias       vp='vagrant provision'
-alias       vr='vagrant reload'
 
 
 #            ________________   ____ _______  ___
