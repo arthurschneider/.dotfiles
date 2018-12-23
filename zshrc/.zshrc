@@ -32,7 +32,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 #############################################################
 ###########################OPTIONS###########################
 # Set command line editing to vi style key bindings
-set -o vi
+# set -o vi
+
 # If you type foo, and it isn't a command,
 # and it is a directory in your cdpath go there
 setopt AUTO_CD
@@ -75,6 +76,16 @@ unsetopt MENU_COMPLETE
 # You only get the menu behaviour when you hit TAB again on the ambiguous
 # completion
 setopt AUTO_MENU
+
+#############################################################
+#######################Custom Keybindings####################
+zle -N shutdown_pc{,}
+bindkey '\e[1;5F' shutdown_pc
+
+zle -N reboot_pc{,}
+bindkey '\e[1;5H' reboot_pc
+
+#############################################################
 
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim

@@ -1,0 +1,12 @@
+# this command use the dmenu command
+
+# it will ask you if you are really sure to halt your pc
+shutdown_pc(){
+   [ $( echo -e "No\nYes" | dmenu -i -p "Are you sure to shutdown?" ) = "Yes" ] && $(shutdown -h now)
+}
+
+# it will ask you if you are really sure to reboot your pc
+reboot_pc(){
+   [ $( echo -e "No\nYes" | dmenu -i -p "Are you sure to reboot?" ) = "Yes" ] && $(shutdown -r now)
+}
+
