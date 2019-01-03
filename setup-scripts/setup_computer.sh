@@ -78,6 +78,8 @@ install_package WORKBENCH mysql-workbench
 
 install_package DMENU dmenu
 
+install_package GIT_FLOW git-flow
+
 chsh -s /bin/zsh
 chsh -s /bin/zsh $USER
 
