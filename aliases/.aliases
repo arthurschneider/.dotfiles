@@ -59,7 +59,7 @@ alias ping='ping -c 5'
 alias nitro_status='gpg --card-status'
 alias nitro_pin='gpg --change-pin'
 alias nitro_edit='gpg --card-edit'
-alias path="echo $PATH | tr -s ':' '\n'"
+alias path='echo -e ${PATH//:/\\n}'
 
 
 #            ________________   ____ _______  ___
