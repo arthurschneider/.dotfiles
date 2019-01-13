@@ -82,7 +82,7 @@ install_package GIT_FLOW git-flow
 
 install_package NMAP nmap
 
-install_package LATEX texlive
+install_package LATEX texlive-full
 
 chsh -s /bin/zsh
 chsh -s /bin/zsh $USER
