@@ -84,6 +84,9 @@ install_package NMAP nmap
 
 install_package LATEX texlive-full
 
+# Install pdf, epub, postscript etc. reader
+install_package OKULAR okular
+
 chsh -s /bin/zsh
 chsh -s /bin/zsh $USER
 
