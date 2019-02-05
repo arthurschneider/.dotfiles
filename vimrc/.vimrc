@@ -68,6 +68,9 @@ set ruler
 " Set the history to the size of 200 instead of 20
 set history=200
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 " When set to "dark", Vim will try to use colors that look
 " good on a dark background. When set to "light", Vim will
 " try to use colors that look good on a light background.
