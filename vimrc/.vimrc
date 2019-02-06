@@ -32,8 +32,8 @@ set shiftwidth=4
 set tabstop=4
 
 " Linebreak on 120 characters
-set lbr
-set tw=121
+" set lbr
+" set tw=121
 
 " show vertical red line to show the 121st character
 set colorcolumn=121
