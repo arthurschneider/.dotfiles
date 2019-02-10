@@ -87,6 +87,8 @@ install_package LATEX texlive-full
 # Install pdf, epub, postscript etc. reader
 install_package OKULAR okular
 
+install_package SYNAPSE synapse
+
 chsh -s /bin/zsh
 chsh -s /bin/zsh $USER
 
