@@ -1,4 +1,4 @@
-# Changes to a directory and lists its contents.
+# Use cheat sheet command to look up commands
 cheatsh () {
   curl cht.sh/"$argv[-1]"
 }
