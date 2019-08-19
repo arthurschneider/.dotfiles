@@ -1,10 +1,3 @@
-#                     ________.______________
-#                    /  _____/|   \__    ___/
-#                   /   \  ___|   | |    |
-#                   \    \_\  \   | |    |
-#                    \______  /___| |____|
-#                           \/
-
 alias ga='git add'
 alias gaa='git add .'
 alias gap='git add -p'
@@ -34,13 +27,6 @@ alias githead1="git show HEAD~1"
 alias githead2="git show HEAD~2"
 
 
-#              .____    .___ _______   ____ _______  ___
-#              |    |   |   |\      \ |    |   \   \/  /
-#              |    |   |   |/   |   \|    |   /\     /
-#              |    |___|   /    |    \    |  / /     \
-#              |_______ \___\____|__  /______/ /___/\  \
-#                      \/           \/               \_/
-
 alias la='ls -alhF'
 alias al='ls -alhF'
 alias lt='ls -alhtF'
@@ -62,13 +48,12 @@ alias nitro_edit='gpg --card-edit'
 alias path='echo -e ${PATH//:/\\n}'
 
 
-#            ________________   ____ _______  ___
-#            \__    ___/     \ |    |   \   \/  /
-#              |    | /  \ /  \|    |   /\     /
-#              |    |/    Y    \    |  / /     \
-#              |____|\____|__  /______/ /___/\  \
-#                            \/               \_/
-
 alias muxls='tmux -2 ls'
 alias muxkills='tmux -2 kill-session'
 alias tmux='tmux -2'
+
+
+alias elasticsearch_start="sudo systemctl start elasticsearch.service"
+alias elasticsearch_stop="sudo systemctl stop elasticsearch.service"
+alias elasticsearch_ping="curl -X GET \"localhost:9200/\""
+alias elasticsearch_logs="sudo journalctl -u elasticsearch | less"
