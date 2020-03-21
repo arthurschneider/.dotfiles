@@ -14,7 +14,7 @@ alias gcom='git checkout master'
 alias gcod='git checkout develop'
 alias gc='git commit'
 alias gptg='git push --tags'
-alias gtags='git tag -n99'
+alias gtags='git tag -ln'
 
 alias gpo='git push origin'
 alias gpom='git push origin master'
