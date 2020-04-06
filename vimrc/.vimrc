@@ -75,11 +75,11 @@ cmap w!! w !sudo tee > /dev/null %
 " good on a dark background. When set to "light", Vim will
 " try to use colors that look good on a light background.
 " Any other value is illegal.
-set background=dark
+"set background=dark
 
 " User the solorized theme
 " https://github.com/altercation/vim-colors-solarized
-colorscheme solarized
+"colorscheme solarized
 
 " Enable default plugins
 set nocompatible
@@ -94,6 +94,9 @@ set title
 set titleold=""
 set fileformats="unix,dos,mac"
 
+" Set python version for the powerline-vim plugin
+let g:powerline_pycmd="py3"
+
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -101,11 +104,3 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-unimpaired'
 call plug#end()
 
-" The combination Ctrl+n will toggle nerdtree
-map <C-n> :NERDTreeToggle<CR>
-
-" The file endings will be ignored by nerdtree
-let NERDTreeIgnore = ['\.swp$']
-
-" Nerdtree will always show hidden files by launch
-let NERDTreeShowHidden=1

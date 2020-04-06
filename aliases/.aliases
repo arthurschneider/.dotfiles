@@ -7,7 +7,7 @@ alias gcom='git checkout master'
 alias gcod='git checkout develop'
 alias gc='git commit'
 alias gptg='git push --tags'
-alias gtags='git tag -n99'
+alias gtags='git tag -ln'
 
 alias gpo='git push origin'
 alias gpom='git push origin master'
@@ -26,32 +26,26 @@ alias githead="git show HEAD"
 alias githead1="git show HEAD~1"
 alias githead2="git show HEAD~2"
 
-
 alias la='ls -alhF'
 alias al='ls -alhF'
-alias lt='ls -alhtF'
 alias vi='vim'
 alias vimrc='$EDITOR ~/.vimrc'
+alias svimrc='source ~/.vimrc'
 
-alias sv='source ~/.vimrc'
 alias zshrc='$EDITOR ~/.zshrc'
-alias sz='source ~/.zshrc'
-alias k9='kill -9'
-
+alias szshrc='source ~/.zshrc'
+alias tlf='tail -f'
 alias mkd='mkdir'
 alias updateos='sudo apt update && sudo apt upgrade && sudo apt autoclean && sudo apt autoremove'
+
+alias open='f(){ nohup gnome-open "$1" &>/dev/null; unset -f f }; f'
 alias ping='ping -c 5'
-
-alias nitro_status='gpg --card-status'
-alias nitro_pin='gpg --change-pin'
-alias nitro_edit='gpg --card-edit'
-alias path='echo -e ${PATH//:/\\n}'
-
+alias aptinstall='sudo apt-get install'
+alias path="echo $PATH | tr -s ':' '\n'"
 
 alias muxls='tmux -2 ls'
-alias muxkills='tmux -2 kill-session'
+alias muxkill='tmux -2 kill-session'
 alias tmux='tmux -2'
-
 
 alias elasticsearch_start="sudo systemctl start elasticsearch.service"
 alias elasticsearch_stop="sudo systemctl stop elasticsearch.service"
