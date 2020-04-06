@@ -1,85 +1,93 @@
-DOTFILES=$HOME/.dotfiles
-ZSH=~/.oh-my-zsh
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
 
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+
+# export NVIM_TUI_ENABLE_TRUE_COLOR=1
 export TERM=xterm-256color
 export COLORTERM=truecolor
 
-# Enables oh-my-zsh plugins
-plugins=(git-flow mvn)
+# import aliases from .dotfiles
+source $XDG_DATA_HOME/.dotfiles/aliases/.aliases
 
-# Set ZSH Theme
-ZSH_THEME="ruhtra"
-. $ZSH/oh-my-zsh.sh
-
-# Add syntax highlighting plugin
-. $DOTFILES/zshrc/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-
-# Import aliases from .dotfiles
-. $DOTFILES/aliases/.aliases
-
-# Import functions from .dotfiles
-for function in $DOTFILES/myfunctions/*; do
+for function in $XDG_DATA_HOME/.dotfiles/myfunctions/*; do
   source $function
 done
 
 # source autojump
 source /usr/share/autojump/autojump.zsh
 
-# Customize to your needs...
+# Add syntax highlighting plugin
+source $XDG_DATA_HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 #############################################################
 ###########################OPTIONS###########################
-# Set command line editing to vi style key bindings
-set -o vi
-# If you type foo, and it isn't a command,
+# set up default emacs keybindigs
+set -o emacs
+
+# uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+autoload -U compinit
+compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+setopt share_history
+# keep a lot of history
+HISTFILE=~/.zhistory
+HISTSIZE=5000
+SAVEHIST=5000
+
+# if you type foo, and it isn't a command,
 # and it is a directory in your cdpath go there
 setopt AUTO_CD
 
-# Allow comments even in interactive shells (especially for Muness)
+# allow comments even in interactive shells (especially for Muness)
 setopt INTERACTIVE_COMMENTS
 
-# Allow multiple terminal sessions to all append to one zsh command history
+# allow multiple terminal sessions to all append to one zsh command history
 setopt APPEND_HISTORY
 
-# Add comamnds as they are typed, don't wait until shell exit
-setopt INC_APPEND_HISTORY 
+# add comamnds as they are typed, don't wait until shell exit
+setopt INC_APPEND_HISTORY
 
-# Do not write events to history that are duplicates of previous events
+# do not write events to history that are duplicates of previous events
 setopt HIST_IGNORE_DUPS
 
-# When searching history don't display results already cycled through twice
+# when searching history don't display results already cycled through twice
 setopt HIST_FIND_NO_DUPS
 
-# Remove extra blanks from each command line being added to history
+# remove extra blanks from each command line being added to history
 setopt HIST_REDUCE_BLANKS
 
-# Include more information about when the command was executed, etc
+# include more information about when the command was executed, etc
 setopt EXTENDED_HISTORY
 
-# Allow completion from within a word/phrase
+# allow completion from within a word/phrase
 setopt COMPLETE_IN_WORD
 
-# When completing from the middle of a word,
+# when completing from the middle of a word,
 # move the cursor to the end of the word
 setopt ALWAYS_TO_END
 
-# Enable parameter expansion, command substitution,
+# enable parameter expansion, command substitution,
 # and arithmetic expansion in the prompt
 setopt PROMPT_SUBST
 
-# Do not want completion complettly and running throuh it wit TAB
+# do not want completion complettly and running throuh it wit TAB
 unsetopt MENU_COMPLETE
 
-# You only get the menu behaviour when you hit TAB again on the ambiguous
+# you only get the menu behaviour when you hit TAB again on the ambiguous
 # completion
 setopt AUTO_MENU
 
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
 #############################################################
-############################RVM OPTIONS######################
-[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+##########################POWERLINE-SHELL####################
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+powerline-daemon -q
+. /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
+##########################POWERLINE-SHELL####################
+
