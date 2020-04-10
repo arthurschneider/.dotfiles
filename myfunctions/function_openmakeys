@@ -1,6 +1,6 @@
 openmakeys(){
   if [ $(hostname) = "dell" ]; then
-    keepassx $HOME/documents/Dropbox/passwordWork.kdbx&
+    keepassxc $HOME/documents/Dropbox/passwordWork.kdbx&
   else
     keepassxc $HOME/Nextcloud/passwordHome.kdbx&
   fi

@@ -8,8 +8,6 @@
 	ui = true
 [pull]
 	rebase = true
-    path = .gitconfig_work
-    path = .gitconfig_private
 
 [user]
 	useConfigOnly = true

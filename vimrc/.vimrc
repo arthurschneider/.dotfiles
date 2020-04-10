@@ -98,9 +98,7 @@ set fileformats="unix,dos,mac"
 let g:powerline_pycmd="py3"
 
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-unimpaired'
 call plug#end()
 

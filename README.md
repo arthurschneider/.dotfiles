@@ -5,22 +5,28 @@
 ### Collection of my dotfiles
 
 #### Setup
- First step is to download the files from repository.  
- Go to your home directory and run:
+ First step is to download the files from repository.
+ Go to your XDG_CONFIG_HOME directory and run:
 ```bash
 git clone git@github.com:arthurschneider/.dotfiles.git
 ```
 
+After that you can put the config files into places.
 
-After that step you need to run the install.sh script.  
-Run these commands
+##### Vim
+To install vim plugins run:
 ```bash
-cd .dotfiles
-./install.sh
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+Then start vim and run:
+:PlugInstall
+
+
+##### Tmux
+To install tmux plugins run:
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-#### Short version
-```
-git clone git@github.com:arthurschneider/.dotfiles.git ~/.dotfiles && cd ~/.dotfiles && ./install.sh
-```
-
+Then load .tmux.conf file and press "Prefix |"

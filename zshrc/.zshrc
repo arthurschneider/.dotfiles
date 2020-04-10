@@ -9,29 +9,24 @@ export TERM=xterm-256color
 export COLORTERM=truecolor
 
 # import aliases from .dotfiles
-source $XDG_DATA_HOME/.dotfiles/aliases/.aliases
+source $XDG_CONFIG_HOME/.dotfiles/aliases/.aliases
 
-for function in $XDG_DATA_HOME/.dotfiles/myfunctions/*; do
+for function in $XDG_CONFIG_HOME/.dotfiles/myfunctions/*; do
   source $function
 done
 
 # source autojump
-source /usr/share/autojump/autojump.zsh
+[[ -s /home/artsch/.autojump/etc/profile.d/autojump.sh ]] && source /home/artsch/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
 
 # Add syntax highlighting plugin
-source $XDG_DATA_HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # customize to your needs...
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:~/.local/share:$PATH
 
 #############################################################
 ###########################OPTIONS###########################
-<<<<<<< HEAD
-# Set command line editing to vi style key bindings
-# set -o vi
-
-# If you type foo, and it isn't a command,
-=======
 # set up default emacs keybindigs
 set -o emacs
 
@@ -48,7 +43,6 @@ HISTSIZE=5000
 SAVEHIST=5000
 
 # if you type foo, and it isn't a command,
->>>>>>> 50527a9276bdfb76f5b11d5b802bcdf827264f6a
 # and it is a directory in your cdpath go there
 setopt AUTO_CD
 
