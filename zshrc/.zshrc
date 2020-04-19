@@ -16,11 +16,11 @@ for function in $XDG_CONFIG_HOME/.dotfiles/myfunctions/*; do
 done
 
 # source autojump
-[[ -s /home/artsch/.autojump/etc/profile.d/autojump.sh ]] && source /home/artsch/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
+#[[ -s /home/artsch/.autojump/etc/profile.d/autojump.sh ]] && source /home/artsch/.autojump/etc/profile.d/autojump.sh
+#autoload -U compinit && compinit -u
 
 # Add syntax highlighting plugin
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:~/.local/share:$PATH
@@ -87,8 +87,8 @@ setopt AUTO_MENU
 
 #############################################################
 ##########################POWERLINE-SHELL####################
-
-powerline-daemon -q
-. /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
+if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
+    source /usr/share/powerline/bindings/zsh/powerline.zsh
+fi
 ##########################POWERLINE-SHELL####################
 

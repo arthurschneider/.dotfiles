@@ -51,6 +51,9 @@ syntax on
 " shows statusline
 set laststatus=2
 
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
+
 " Show partial commands in the last line of the screen
 set showcmd
 
@@ -85,7 +88,6 @@ cmap w!! w !sudo tee > /dev/null %
 set nocompatible
 filetype plugin on
 
-
 " Enable matchit default vim plugin
 runtime macros/matchit.vim
 
@@ -95,10 +97,23 @@ set titleold=""
 set fileformats="unix,dos,mac"
 
 " Set python version for the powerline-vim plugin
-let g:powerline_pycmd="py3"
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts = 1
+set guifont=Space\ Mono\ for\ Powerline\ 10
+
+" remove empty angle at the end
+let g:airline_skip_empty_sections = 1
+
+" extension for tab line
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+set fillchars+=stl:\ ,stlnc:\
 
 call plug#begin('~/.vim/plugged')
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
