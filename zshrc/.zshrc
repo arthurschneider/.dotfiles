@@ -16,11 +16,10 @@ for function in $XDG_CONFIG_HOME/.dotfiles/myfunctions/*; do
 done
 
 # source autojump
-#[[ -s /home/artsch/.autojump/etc/profile.d/autojump.sh ]] && source /home/artsch/.autojump/etc/profile.d/autojump.sh
-#autoload -U compinit && compinit -u
+source /usr/share/autojump/autojump.sh
 
 # Add syntax highlighting plugin
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:~/.local/share:$PATH
@@ -91,4 +90,9 @@ if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
     source /usr/share/powerline/bindings/zsh/powerline.zsh
 fi
 ##########################POWERLINE-SHELL####################
+
+####################### FZF (fuzzy-finder####################
+#############################################################
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#############################################################
 
