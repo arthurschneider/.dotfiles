@@ -16,37 +16,46 @@ alias gd='git diff'
 alias gs='git status'
 
 alias glog='git log'
-alias gunstage='git reset HEAD -- .'
 alias gsave='git add -A && git commit -m "SAVEPOINT"'
 alias ggraph='git log --graph --oneline --decorate --all'
 alias gco='git checkout'
-
 alias gitremotes="git remote update origin --prune; git branch -r"
+
 alias githead="git show HEAD"
 alias githead1="git show HEAD~1"
 alias githead2="git show HEAD~2"
+alias gfli="git flow init"
+alias gflfs="git flow feature start"
 
+alias gflfp="git flow feature publish"
+alias gflft="git flow feature track"
+alias gflff="git flow feature finish"
+alias gflrs="git flow release start"
+alias gflrf="git flow release finish"
+
+alias gflhs="git flow hotfix start"
+alias gflhf="git flow hothix finish"
 alias la='ls -alhF'
 alias al='ls -alhF'
 alias vi='vim'
+
 alias vimrc='$EDITOR ~/.vimrc'
 alias svimrc='source ~/.vimrc'
-
 alias zshrc='$EDITOR ~/.zshrc'
 alias szshrc='source ~/.zshrc'
 alias tlf='tail -f'
+
 alias mkd='mkdir'
 alias updateos='sudo apt update && sudo apt upgrade && sudo apt autoclean && sudo apt autoremove'
-
 alias ping='ping -c 5'
-alias aptinstall='sudo apt-get install'
+alias aptinstall='sudo apt install'
 alias path="echo $PATH | tr -s ':' '\n'"
 
 alias muxls='tmux -2 ls'
 alias muxkill='tmux -2 kill-session'
 alias tmux='tmux -2'
-
 alias elasticsearch_start="sudo systemctl start elasticsearch.service"
 alias elasticsearch_stop="sudo systemctl stop elasticsearch.service"
+
 alias elasticsearch_ping="curl -X GET \"localhost:9200/\""
 alias elasticsearch_logs="sudo journalctl -u elasticsearch | less"
