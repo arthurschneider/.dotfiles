@@ -84,12 +84,7 @@ unsetopt MENU_COMPLETE
 # completion
 setopt AUTO_MENU
 
-#############################################################
-##########################POWERLINE-SHELL####################
-if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
-    source /usr/share/powerline/bindings/zsh/powerline.zsh
-fi
-##########################POWERLINE-SHELL####################
+plugins=(colored-man-pages mvn git-prompt)
 
 ####################### FZF (fuzzy-finder####################
 #############################################################

@@ -97,23 +97,23 @@ set titleold=""
 set fileformats="unix,dos,mac"
 
 " Set python version for the powerline-vim plugin
-let g:airline_theme='powerlineish'
-let g:airline_powerline_fonts = 1
-set guifont=Space\ Mono\ for\ Powerline\ 10
+"let g:airline_theme='powerlineish'
+"let g:airline_powerline_fonts = 1
+"set guifont=Space\ Mono\ for\ Powerline\ 10
 
 " remove empty angle at the end
-let g:airline_skip_empty_sections = 1
+"let g:airline_skip_empty_sections = 1
 
 " extension for tab line
-let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-set fillchars+=stl:\ ,stlnc:\
+"let g:airline#extensions#tabline#enabled = 0
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#formatter = 'unique_tail'
+"set fillchars+=stl:\ ,stlnc:\
 
 call plug#begin('~/.vim/plugged')
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
