@@ -8,6 +8,13 @@ export VISUAL=/usr/bin/vim
 export TERM=xterm-256color
 export COLORTERM=truecolor
 
+# Set ZSH Theme
+export ZSH=$XDG_CONFIG_HOME/.oh-my-zsh/oh-my-zsh
+plugins=(colored-man-pages mvn git-prompt)
+ZSH_THEME="ruhtra"
+source $ZSH/oh-my-zsh.sh
+
+
 # import aliases from .dotfiles
 source $XDG_CONFIG_HOME/.dotfiles/aliases/.aliases
 
@@ -84,7 +91,6 @@ unsetopt MENU_COMPLETE
 # completion
 setopt AUTO_MENU
 
-plugins=(colored-man-pages mvn git-prompt)
 
 ####################### FZF (fuzzy-finder####################
 #############################################################
