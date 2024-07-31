@@ -1,5 +1,7 @@
 export XDG_CONFIG_HOME=$HOME/.config
 
+export LANG=de_DE.utf8
+export LANGUAGE=de_DE
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
@@ -96,3 +98,9 @@ setopt AUTO_MENU
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #############################################################
 
+source <(kubectl completion zsh)
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
