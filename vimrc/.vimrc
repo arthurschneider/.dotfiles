@@ -110,6 +110,12 @@ set fileformats="unix,dos,mac"
 "let g:airline#extensions#tabline#formatter = 'unique_tail'
 "set fillchars+=stl:\ ,stlnc:\
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+
 call plug#begin('~/.vim/plugged')
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-unimpaired'

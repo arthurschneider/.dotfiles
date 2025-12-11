@@ -10,8 +10,8 @@ export TERM=xterm-256color
 export COLORTERM=truecolor
 
 # Set ZSH Theme
-export ZSH=$XDG_CONFIG_HOME/.oh-my-zsh/oh-my-zsh
-plugins=(colored-man-pages mvn git-prompt)
+export ZSH=$XDG_CONFIG_HOME/.oh-my-zsh
+plugins=(colored-man-pages mvn minikube git-prompt)
 ZSH_THEME="ruhtra"
 source $ZSH/oh-my-zsh.sh
 
@@ -30,7 +30,7 @@ source /usr/share/autojump/autojump.sh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # customize to your needs...
-export PATH=$HOME/bin:/usr/local/bin:~/.local/share:$PATH
+export PATH=$HOME/bin:/usr/local/bin:~/.local/share:/usr/local/go/bin:$PATH
 
 #############################################################
 ###########################OPTIONS###########################
@@ -95,10 +95,18 @@ setopt AUTO_MENU
 
 ####################### FZF (fuzzy-finder####################
 #############################################################
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#source $XDG_CONFIG_HOME/.dotfiles/zshrc/key-bindings.zsh
+#source $XDG_CONFIG_HOME/.dotfiles/zshrc/completion.zsh
+#source /usr/share/bash-completion/completions/fzf
+
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
 #############################################################
 
 source <(kubectl completion zsh)
+eval "$(direnv hook zsh)"
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

@@ -11,3 +11,5 @@
 
 [user]
 	useConfigOnly = true
+[commit]
+	template = /home/artsch/.gitmessage

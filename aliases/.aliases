@@ -3,11 +3,13 @@ alias gaa='git add .'
 alias gap='git add -p'
 alias gb='git branch'
 alias gcom='git checkout master'
+alias gba='git branch -a'
+alias gfap='git fetch -ap'
 
 alias gcod='git checkout develop'
 alias gc='git commit'
 alias gptg='git push --tags'
-alias gtags='git tag -ln'
+alias gtags='git tag -ln | sort -V'
 
 alias gpo='git push origin'
 alias gpom='git push origin master'
@@ -32,9 +34,13 @@ alias gflft="git flow feature track"
 alias gflff="git flow feature finish"
 alias gflrs="git flow release start"
 alias gflrf="git flow release finish"
+alias gflrp="git flow release publish"
 
+alias gflrt="git flow release track"
 alias gflhs="git flow hotfix start"
 alias gflhf="git flow hothix finish"
+alias gflhp="git flow hotfix publish"
+alias gflht="git flow hotfix track"
 alias la='ls -alhF'
 alias al='ls -alhF'
 alias vi='vim'
@@ -59,3 +65,5 @@ alias elasticsearch_stop="sudo systemctl stop elasticsearch.service"
 
 alias elasticsearch_ping="curl -X GET \"localhost:9200/\""
 alias elasticsearch_logs="sudo journalctl -u elasticsearch | less"
+alias idea="/opt/intellij/idea-IU-243.22562.218/bin/idea . > /dev/null 2>&1 &"
+alias econvpn='sudo openvpn --config ~/Dokumente/vpn/client_neu_2.ovpn --auth-user-pass ~/Dokumente/vpn/auth.txt'
